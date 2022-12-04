@@ -2204,6 +2204,7 @@ plt_load_int (int visibility, playlist_t *plt, playItem_t *after, const char *fn
     playItem_t *last_added = NULL;
 
     unsigned undo_enabled = plt->undo_enabled;
+    plt->undo_enabled = 0;
 
     #ifdef __MINGW32__
     if (!strncmp (fname, "file://", 7)) {
